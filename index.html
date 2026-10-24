@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<title>Baobab · Suite RH</title>
+<style>
+:root{--bg:#f3f4ef;--cd:#fff;--ink:#14201b;--mu:#5d6b63;--ln:#dde3da;--g:#14573f;--on:#fff;--g9:#0c2a21;--au:#e0a800;--rd:#b3261e;--hv:#eef3ec;--serif:Palatino,"Palatino Linotype",Georgia,serif;--sans:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1410;--cd:#12211a;--ink:#e8efe9;--mu:#9bb0a4;--ln:#25392f;--g:#46c593;--on:#04140d;--g9:#050d0a;--hv:#1a2d24;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a1410;--cd:#12211a;--ink:#e8efe9;--mu:#9bb0a4;--ln:#25392f;--g:#46c593;--on:#04140d;--g9:#050d0a;--hv:#1a2d24;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}body{font:15px/1.5 var(--sans);background:var(--bg);color:var(--ink)}
+:focus-visible{outline:3px solid var(--au);outline-offset:2px}
+aside{position:fixed;inset:0 auto 0 0;width:240px;background:var(--g9);color:#cfe0d7;padding:calc(22px + env(safe-area-inset-top,0px)) 12px 14px;display:flex;flex-direction:column;gap:2px;z-index:5}
+.br{padding:0 10px 18px;display:flex;gap:11px;align-items:center}.br i{font-style:normal;font-size:30px;line-height:1}.br b{display:block;font:700 20px var(--serif);color:#fff}.br small{color:#8fb0a1}
+aside button{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;cursor:pointer;color:inherit}
+aside button:hover{background:#ffffff12}aside button.on{background:#ffffff1c;color:#fff;font-weight:600;box-shadow:inset 3px 0 0 var(--au)}
+aside button em{margin-left:auto;font-style:normal;background:var(--au);color:#1b1500;border-radius:99px;padding:0 7px;font-size:12px;font-weight:700}
+.sp{flex:1}
+main{margin-left:240px;padding:32px 40px 70px;max-width:1240px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.top h1{font:700 32px/1.15 var(--serif);margin:0}.top p{margin:4px 0 0;color:var(--mu)}
+.b{border:1px solid var(--ln);background:var(--cd);color:var(--ink);padding:9px 15px;border-radius:9px;cursor:pointer;font:600 14px var(--sans)}.b:hover{border-color:var(--g)}
+.b.p{background:var(--g);border-color:var(--g);color:var(--on)}.b.d{color:var(--rd)}
+.cd{background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:18px 20px}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:20px}
+.kp button{all:unset;cursor:pointer;background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:16px 18px;border-top:4px solid var(--c)}
+.kp button:hover{border-color:var(--c)}.kp b{display:block;font:700 38px/1 var(--serif);color:var(--c)}.kp span{color:var(--mu);font-size:13.5px}
+.gr{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;margin-bottom:16px}
+.cd h3{font:700 18px var(--serif);margin:0 0 10px}
+.al{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--ln);cursor:pointer}.al:last-child{border:0}.al:hover{color:var(--g)}
+.dt{width:10px;height:10px;border-radius:50%;flex:none;background:#8aa;}.l2{background:var(--rd)}.l1{background:var(--au)}.l0{background:var(--g)}
+.bar{display:grid;grid-template-columns:130px 1fr 28px;gap:10px;align-items:center;margin:8px 0;font-size:14px}.bar u{display:block;height:8px;border-radius:4px;background:var(--hv)}.bar u i{display:block;height:100%;border-radius:4px;background:var(--g)}
+.tl{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}.tl input,.tl select,.fg input,.fg select,.fg textarea,.mini input,.mini select,#cpi{padding:10px 12px;border:1px solid var(--ln);border-radius:9px;background:var(--cd);color:var(--ink);font:15px var(--sans);min-width:0}.tl input{flex:1;min-width:200px}
+.pn{background:var(--cd);border:1px solid var(--ln);border-radius:12px;overflow:auto}
+table{width:100%;border-collapse:collapse}th{text-align:left;padding:12px 16px;font-size:13px;color:var(--mu);border-bottom:2px solid var(--g);white-space:nowrap}td{padding:12px 16px;border-bottom:1px solid var(--ln)}tr:last-child td{border:0}tbody tr{cursor:pointer}tbody tr:hover{background:var(--hv)}small{color:var(--mu)}
+.bd{display:inline-block;padding:2px 10px;border-radius:99px;font-size:12.5px;font-weight:600;background:var(--hv);color:var(--mu)}.ok{background:#d9f1e3;color:#116a3b}.wa{background:#fbefc4;color:#7a5800}.ko{background:#f8dcd9;color:#a1231b}
+.em{padding:56px 20px;text-align:center;color:var(--mu)}.em b{display:block;font:700 20px var(--serif);color:var(--ink);margin-bottom:6px}
+#sc{position:fixed;inset:0;background:#06120d88;opacity:0;pointer-events:none;transition:opacity .2s;z-index:8}#sc.on{opacity:1;pointer-events:auto}
+#dr{position:fixed;top:0;right:0;bottom:0;width:min(600px,100%);background:var(--cd);z-index:9;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}#dr.on{transform:none}
+.dh{padding:22px 26px 12px;border-bottom:1px solid var(--ln)}.dh h2{font:700 24px var(--serif);margin:0}.db{padding:18px 26px;overflow:auto;flex:1}.df{padding:14px 26px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--ln);display:flex;gap:10px;justify-content:flex-end}.df .d{margin-right:auto}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:14px}.fg label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600}.fg .w{grid-column:1/3}.fg input,.fg select,.fg textarea{font-weight:400;width:100%}
+.inf{background:var(--hv);border-radius:10px;padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.7}
+.cl{display:grid;grid-template-columns:92px 1fr;gap:8px;padding:6px 0;border-bottom:1px solid var(--ln);font-size:14px}
+.mini{display:grid;grid-template-columns:130px 1fr;gap:8px;margin-top:8px}.mini input,.mini select{width:100%}.mini button{grid-column:1/3}
+.gen{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}.gen .b{padding:6px 11px;font-size:13px}
+.sh{font:700 16px var(--serif);margin:20px 0 6px}
+#cp{position:fixed;inset:0;background:#06120d99;z-index:20;display:none;align-items:flex-start;justify-content:center;padding-top:12vh}#cp.on{display:flex}
+#cp div{background:var(--cd);border-radius:14px;width:min(560px,94vw);padding:12px;box-shadow:0 24px 60px #0006}#cpi{width:100%;font-size:17px}
+#cp a{display:flex;justify-content:space-between;padding:10px 12px;border-radius:8px;cursor:pointer}#cp a:hover,#cp a.f{background:var(--hv)}
+#toast{position:fixed;left:50%;bottom:calc(28px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--g9);color:#fff;padding:11px 20px;border-radius:9px;opacity:0;transition:.25s;z-index:30;pointer-events:none;max-width:92vw}#toast.on{opacity:1;transform:translate(-50%,0)}
+#paper{position:fixed;inset:0;background:#fff;color:#000;z-index:25;overflow:auto;display:none;font:14pt/1.6 "Times New Roman",serif}#paper.on{display:block}.pg{max-width:780px;margin:0 auto;padding:30px}.tb{position:sticky;top:0;background:#0c2a21;padding:10px;display:flex;gap:8px;justify-content:center}
+.hd{text-align:center;margin-bottom:18px}.pg h1{text-align:center;font-size:17pt;text-decoration:underline;margin:24px 0 4px}.sg{text-align:right;margin-top:42px}.official-head{display:grid;grid-template-columns:1fr 1fr;gap:18px;font:11.5pt/1.35 "Times New Roman",serif;margin-bottom:28px}.official-head .left{text-align:left;text-transform:uppercase}.official-head .right{text-align:center}.official-head .ministry{font-weight:bold}.official-meta{display:flex;justify-content:space-between;gap:16px;font:11pt "Times New Roman",serif;margin:28px 0 26px}.official-body{font:13pt/1.65 "Times New Roman",serif;text-align:justify}.official-body p{margin:0 0 16px}.ampliations{font:10.5pt/1.35 "Times New Roman",serif;margin-top:28px}.ampliations u{font-weight:bold}.pg .sealnote{font-size:9.5pt;font-style:italic}
+.hint{color:var(--mu);font-size:13px;margin:6px 0 0}
+@media(max-width:860px){aside{inset:auto 0 0 0;width:auto;flex-direction:row;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));justify-content:space-around;overflow-x:auto}.br,.sp,aside button span{display:none}aside button{padding:10px 12px;font-size:20px}aside button.on{box-shadow:inset 0 3px 0 var(--au)}main{margin:0;padding:22px 16px 100px}.gr{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.fg .w{grid-column:1}.top h1{font-size:26px}}
+@media print{body>*:not(#paper){display:none!important}#paper{position:static;overflow:visible}.tb{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ===== Refonte design Baobab : surcharge visuelle uniquement ===== */
+:root{--serif:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--sans:"Plus Jakarta Sans","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;--bl:#1d4f91;--au:#ee8b1d;--bg:#eef2ee;--hv:#e9f1ec;--sh:0 1px 2px #10201b0f,0 8px 22px -10px #10201b30}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bl:#7fb0f0;--bg:#09130f;--sh:0 1px 2px #0006,0 8px 22px -10px #000a}}
+:root[data-theme="dark"]{--bl:#7fb0f0;--bg:#09130f;--sh:0 1px 2px #0006,0 8px 22px -10px #000a}
+body{letter-spacing:.005em;-webkit-font-smoothing:antialiased}
+aside{background:linear-gradient(185deg,var(--g9),#0e3b2c 130%);box-shadow:4px 0 24px -12px #000a}
+.br i{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--au);color:#2a1700;flex:none}.br i svg{width:24px;height:24px}
+.br b{font-family:var(--serif);letter-spacing:.01em}
+aside button{transition:background .18s,transform .18s}aside button:hover{transform:translateX(2px)}
+aside button b{display:grid;place-items:center;width:22px;height:22px;flex:none}aside button b svg{width:20px;height:20px}
+aside button.on{background:linear-gradient(90deg,#ffffff26,#ffffff0a)}
+.top h1{letter-spacing:-.01em}
+.b{transition:transform .15s,box-shadow .15s,border-color .15s,background .15s;box-shadow:0 1px 1px #10201b0d}.b:hover{transform:translateY(-1px);box-shadow:var(--sh)}.b:active{transform:none}
+.b.p{background:linear-gradient(180deg,color-mix(in srgb,var(--g) 88%,#fff),var(--g))}.b.p:hover{filter:brightness(1.08)}
+.b.d{border-color:color-mix(in srgb,var(--rd) 40%,var(--ln))}.b.d:hover{background:var(--rd);border-color:var(--rd);color:#fff}
+.cd,.pn{box-shadow:var(--sh);border-radius:16px}
+.kp button{position:relative;overflow:hidden;border-radius:16px;box-shadow:var(--sh);background:linear-gradient(160deg,color-mix(in srgb,var(--c) 10%,var(--cd)),var(--cd) 62%);transition:transform .18s,box-shadow .18s}
+.kp button:hover{transform:translateY(-2px)}
+.kp button::after{content:"";position:absolute;right:14px;top:14px;width:26px;height:26px;background:var(--c);opacity:.85;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
+.kp button:nth-child(1){--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%229%22 cy=%228%22 r=%223.5%22/%3E%3Cpath d=%22M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6%22/%3E%3Cpath d=%22M16 4.6a3.5 3.5 0 0 1 0 6.8%22/%3E%3Cpath d=%22M18 14.3c2.2.7 3.5 2.6 3.5 5.7%22/%3E%3C/svg%3E")}.kp button:nth-child(2){--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%223%22 y=%225%22 width=%2218%22 height=%2216%22 rx=%222%22/%3E%3Cpath d=%22M3 10h18M8 3v4M16 3v4%22/%3E%3C/svg%3E")}.kp button:nth-child(3){--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 17l6-6 4 4 8-8%22/%3E%3Cpath d=%22M15 7h6v6%22/%3E%3C/svg%3E")}.kp button:nth-child(4){--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M6 3h12M6 21h12%22/%3E%3Cpath d=%22M7 3v3.5a5 5 0 0 0 2 4L12 12l-3 1.5a5 5 0 0 0-2 4V21M17 3v3.5a5 5 0 0 1-2 4L12 12l3 1.5a5 5 0 0 1 2 4V21%22/%3E%3C/svg%3E")}.kp button:nth-child(5){--ic:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%223%22 y=%225%22 width=%2218%22 height=%2214%22 rx=%222%22/%3E%3Cpath d=%22m3 7 9 6 9-6%22/%3E%3C/svg%3E")}
+.pn{max-height:calc(100vh - 250px)}
+th{position:sticky;top:0;z-index:1;background:var(--cd);font-weight:700;letter-spacing:.02em}
+tbody tr:nth-child(even){background:var(--hv)}tbody tr{transition:background .12s}tbody tr:hover{background:color-mix(in srgb,var(--g) 14%,var(--cd))}
+.bd{padding:3px 11px}
+.tl input:focus,.tl select:focus,.fg input:focus,.fg select:focus,.fg textarea:focus,.mini input:focus,.mini select:focus,#cpi:focus{outline:0;border-color:var(--g);box-shadow:0 0 0 3px color-mix(in srgb,var(--g) 24%,transparent)}
+.fg input:user-invalid,.fg select:user-invalid,.fg textarea:user-invalid{border-color:var(--rd);box-shadow:0 0 0 3px color-mix(in srgb,var(--rd) 20%,transparent)}
+.fg input:user-valid:not(:placeholder-shown){border-color:color-mix(in srgb,var(--g) 60%,var(--ln))}
+.fg label{color:var(--mu);font-weight:600}
+#sc{backdrop-filter:blur(3px)}#dr{box-shadow:-18px 0 50px -20px #000a;border-radius:18px 0 0 18px}
+.inf{border-left:4px solid var(--bl)}
+.al{border-radius:8px;padding-left:6px;padding-right:6px}.al:hover{background:var(--hv)}
+.bar u i{background:linear-gradient(90deg,var(--g),var(--bl))}
+@media(prefers-reduced-motion:no-preference){
+#mn>*{animation:rise .4s cubic-bezier(.2,.7,.2,1) both}#mn>*:nth-child(2){animation-delay:.05s}#mn>*:nth-child(3){animation-delay:.1s}#mn>*:nth-child(n+4){animation-delay:.15s}
+#cp.on>div{animation:pop .2s ease-out}@keyframes rise{from{opacity:0;transform:translateY(8px)}}@keyframes pop{from{opacity:0;transform:scale(.97) translateY(-6px)}}}
+@media(max-width:1100px) and (min-width:861px){aside{width:74px;padding-left:8px;padding-right:8px;align-items:center}aside button{justify-content:center;padding:12px}aside button span,.br div{display:none}aside button em{position:absolute;margin:-22px -26px 0 0}main{margin-left:74px;padding:28px 24px 70px}.kp{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}}
+@media(max-width:860px){aside{border-radius:18px 18px 0 0;box-shadow:0 -8px 24px -12px #000a}aside button b svg{width:24px;height:24px}aside button.on{background:#ffffff1f}#dr{border-radius:0}.pn{max-height:none}}
+@page{size:A4;margin:14mm}
+@media print{*{-webkit-print-color-adjust:exact;print-color-adjust:exact}#paper{font-size:12pt}.pg{padding:12mm 14mm;max-width:none}.official-head{grid-template-columns:1fr 1fr}.official-body{font-size:12.5pt}.official-meta{font-size:10.5pt}.pg table{width:100%;border-collapse:collapse}.pg th,.pg td{border:1px solid #333;padding:4px 7px;font-size:10.5pt;position:static;background:none;color:#000}.pg tr{break-inside:avoid}.pg thead{display:table-header-group}.pg tbody tr:nth-child(even){background:none}}
+
+#authGate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;background:var(--bg)}
+#authCard{width:min(430px,100%);background:var(--cd);border:1px solid var(--ln);border-radius:18px;padding:26px;box-shadow:var(--sh)}
+#authCard h1{font:700 27px var(--serif);margin:0 0 5px}#authCard p{color:var(--mu);margin:0 0 18px}
+#authCard label{display:block;font-weight:600;font-size:13px;margin:12px 0 5px}#authCard input{width:100%;padding:12px;border:1px solid var(--ln);border-radius:9px;background:var(--cd);color:var(--ink);font:16px var(--sans)}
+#authError{color:var(--rd);font-size:13px;white-space:pre-wrap;margin-top:12px}#cloudbar{position:fixed;right:12px;top:10px;z-index:6;display:none;gap:8px;align-items:center;background:var(--cd);border:1px solid var(--ln);border-radius:10px;padding:6px 8px;box-shadow:var(--sh);font-size:12px}#cloudState{color:var(--mu)}
+@media(max-width:860px){#cloudbar{top:8px;right:8px}main{padding-top:56px}}
+</style></head><body>
+<div id="authGate"><form id="authCard"><div style="font-size:34px;margin-bottom:8px">🌳</div><h1>Baobab Suite RH</h1><p>Connexion sécurisée à l’espace RH centralisé.</p><label for="authEmail">Adresse e-mail de l’administrateur</label><input id="authEmail" type="email" autocomplete="username" required><label for="authPassword">Mot de passe</label><input id="authPassword" type="password" autocomplete="current-password" required minlength="8"><button class="b p" style="width:100%;margin-top:18px" type="submit" id="authSubmit">Se connecter</button><div id="authError" role="alert"></div><small>Les inscriptions publiques sont désactivées. Le compte administrateur doit être créé dans Supabase.</small></form></div>
+<div id="cloudbar"><span id="cloudState">Connexion requise</span><button class="b" onclick="baobabLogout()">Déconnexion</button></div>
+<aside id="sd"></aside><main id="mn"></main><div id="sc" onclick="shut()"></div><div id="dr" role="dialog" aria-modal="true"></div><div id="cp" onclick="if(event.target==this)cpx()"><div><input id="cpi" placeholder="Chercher un agent, un courrier, un document… ou une action" oninput="cps()" onkeydown="cpk(event)"><section id="cpr"></section></div></div><div id="toast"></div><div id="paper"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6),iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'),TODAY=iso(new Date());
+const fmt=d=>d?new Date(d+'T00:00').toLocaleDateString('fr-FR'):'—',dd=d=>Math.round((new Date(d+'T00:00')-new Date(TODAY+'T00:00'))/864e5),addY=(d,n)=>{const x=new Date(d+'T00:00');x.setFullYear(x.getFullYear()+n);return iso(x)};
+const yrs=d=>d?Math.floor((Date.now()-new Date(d+'T00:00'))/31557600000):null,norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+let db={agents:[],conges:[],courriers:[],documents:[],contacts:[],actes:[],archivesActes:[],cfg:{}},view='home',cur=null;
+db.cfg=Object.assign({svc:'',av:2,droit:30},db.cfg);
+let baobabUser=null, baobabSaving=Promise.resolve(), baobabSaveTimer=null, baobabLastError='';
+const baobabEmpty=()=>({agents:[],conges:[],courriers:[],documents:[],contacts:[],actes:[],archivesActes:[],cfg:{svc:'',av:2,droit:30}});
+const persist=()=>{
+  if(!baobabUser||!window.baobabSupabase){toast('Non connecté : modification non synchronisée.');return;}
+  clearTimeout(baobabSaveTimer);
+  $('#cloudState').textContent='Enregistrement…';
+  const snapshot=JSON.parse(JSON.stringify(db));
+  baobabSaveTimer=setTimeout(()=>{
+    baobabSaving=baobabSaving.then(async()=>{
+      const {error}=await window.baobabSupabase.from('baobab_workspace').upsert({user_id:baobabUser.id,data:snapshot,updated_at:new Date().toISOString()},{onConflict:'user_id'});
+      if(error){baobabLastError=error.message;$('#cloudState').textContent='Erreur de synchronisation';toast('Échec de synchronisation. Ne fermez pas la page; vérifiez la connexion.');console.error('Baobab sync:',error.message);}
+      else {baobabLastError='';$('#cloudState').textContent='Données synchronisées';}
+    }).catch(e=>{baobabLastError=String(e);$('#cloudState').textContent='Erreur de synchronisation';console.error(e)});
+  },350);
+};
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('on'),2600)}
+const agNm=a=>[a?.nom,a?.prenoms].filter(Boolean).join(' '),who=id=>agNm(db.agents.find(a=>a.id==id))||'—';
+const RA=c=>{const k=(String(c||'').toUpperCase().split(/[\/\s,-]/)[0].match(/^[A-Z]+/)||[''])[0];return['PA','PB','PC'].includes(k)?63:['A','I'].includes(k)?60:['B','C','II','III'].includes(k)?58:['D','E','IV'].includes(k)?55:60};
+const retD=a=>a.naissance?addY(a.naissance,RA(a.categorie)):'',nextAv=a=>{const b=a.dernierAv||a.priseService||a.recrutement;return b?addY(b,+db.cfg.av||2):''};
+const HOL=['01-01','01-03','03-08','05-01','08-05','08-15','11-01','12-11','12-25'];
+function wd(a,b){let n=0;if(!a||!b||b<a)return 0;for(let d=new Date(a+'T00:00'),e=new Date(b+'T00:00');d<=e;d.setDate(d.getDate()+1)){const w=d.getDay();if(w&&w<6&&!HOL.includes(iso(d).slice(5)))n++}return n}
+const enC=a=>db.conges.some(c=>c.agentId==a.id&&c.statut=='Accordé'&&c.debut<=TODAY&&c.fin>=TODAY),st=a=>enC(a)?'En congé':a.statut||'En activité';
+const pris=(id,y,skip)=>db.conges.filter(c=>c.agentId==id&&c.id!=skip&&c.type=='Congé annuel'&&c.statut=='Accordé'&&(c.debut||'').slice(0,4)==y).reduce((n,c)=>n+(+c.jours||0),0);
+const bd=v=>`<span class="bd ${/^(En activité|Accordé|Traité)$/.test(v)?'ok':/^(En congé|Demandé|En cours|Reçu)$/.test(v)?'wa':/^(Refusé|Décédé)$/.test(v)?'ko':''}">${esc(v||'')}</span>`;
+const AS=['En activité','Détaché','Disponibilité','Retraité','Décédé'];
+const M={
+agents:{l:'Agents',one:'agent',sub:'Dossiers individuels, situation administrative et carrière',fl:'statut',req:'nom',main:agNm,fo:[...AS,'En congé'],
+f:[['matricule','Matricule'],['nom','Nom'],['prenoms','Prénoms'],['sexe','Sexe','sel',['H','F']],['naissance','Date de naissance','date'],['lieu','Lieu de naissance'],['service','Service'],['categorie','Catégorie / échelle (ex. B/2)'],['grade','Grade'],['fonction','Fonction'],['statut','Statut','sel',AS],['recrutement','Date de recrutement','date'],['priseService','Prise de service','date'],['dernierAv','Dernier avancement','date'],['tel','Téléphone'],['email','Email'],['notes','Notes','area']],
+cols:[['Agent',r=>`<b>${esc(agNm(r))}</b><br><small>${esc(r.matricule||'')}</small>`],['Service',r=>esc(r.service)],['Fonction',r=>esc(r.fonction)],['Catégorie',r=>esc(r.categorie)],['Statut',r=>bd(st(r))]]},
+conges:{l:'Congés',one:'congé',sub:'Demandes, décisions, soldes et absences',fl:'statut',req:'agentId',main:r=>who(r.agentId),
+f:[['agentId','Agent','agent'],['type','Type','sel',['Congé annuel','Maladie','Autorisation d’absence','Autre']],['debut','Début','date'],['fin','Fin','date'],['statut','Statut','sel',['Demandé','Accordé','Refusé']],['motif','Motif']],
+cols:[['Agent',r=>`<b>${esc(who(r.agentId))}</b>`],['Type',r=>esc(r.type)],['Période',r=>fmt(r.debut)+' → '+fmt(r.fin)],['Jours',r=>r.jours||''],['Statut',r=>bd(r.statut)]]},
+courriers:{l:'Courrier',one:'courrier',sub:'Arrivées et départs, avec suivi des échéances',fl:'statut',req:'objet',main:r=>r.objet,
+f:[['numero','N° (attribué automatiquement)','auto'],['type','Type','sel',['Arrivée','Départ']],['objet','Objet'],['correspondant','Correspondant'],['date','Date','date'],['echeance','Échéance de traitement','date'],['statut','Statut','sel',['Reçu','En cours','Traité']],['notes','Notes','area']],
+cols:[['N°',r=>esc(r.numero)],['Objet',r=>`<b>${esc(r.objet)}</b>`],['Correspondant',r=>esc(r.correspondant)],['Échéance',r=>fmt(r.echeance)],['Statut',r=>bd(r.statut)]]},
+documents:{l:'Documents',one:'document',sub:'Notes, arrêtés, décisions et archives physiques',fl:'type',req:'titre',main:r=>r.titre,
+f:[['titre','Titre / objet'],['ref','Référence'],['type','Type','sel',['Note de service','Arrêté','Décision','Rapport','Autre']],['date','Date','date'],['expiration','Expiration / renouvellement','date'],['service','Service'],['emplacement','Emplacement physique'],['notes','Notes','area']],
+cols:[['Titre',r=>`<b>${esc(r.titre)}</b>`],['Référence',r=>esc(r.ref)],['Type',r=>esc(r.type)],['Date',r=>fmt(r.date)],['Rangement',r=>esc(r.emplacement)]]},
+contacts:{l:'Contacts',one:'contact',sub:'Administrations, partenaires et fournisseurs',fl:'categorie',req:'nom',main:r=>r.nom,
+f:[['nom','Nom'],['organisme','Organisme'],['fonction','Fonction'],['tel','Téléphone'],['email','Email'],['categorie','Catégorie','sel',['Administration','Partenaire','Fournisseur','Autre']]],
+cols:[['Nom',r=>`<b>${esc(r.nom)}</b>`],['Organisme',r=>esc(r.organisme)],['Fonction',r=>esc(r.fonction)],['Téléphone',r=>esc(r.tel)],['Catégorie',r=>esc(r.categorie)]]}};
+const P={"tree": "<path d=\"M12 21v-7\"/><path d=\"M8 21h8\"/><path d=\"M12 14c-4 0-8-2-8-6 3-1 5 0 8 2 3-2 5-3 8-2 0 4-4 6-8 6z\"/>", "home": "<path d=\"M3 10.5 12 3l9 7.5\"/><path d=\"M5 9.5V21h14V9.5\"/><path d=\"M10 21v-6h4v6\"/>", "users": "<circle cx=\"9\" cy=\"8\" r=\"3.5\"/><path d=\"M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6\"/><path d=\"M16 4.6a3.5 3.5 0 0 1 0 6.8\"/><path d=\"M18 14.3c2.2.7 3.5 2.6 3.5 5.7\"/>", "trend": "<path d=\"M3 17l6-6 4 4 8-8\"/><path d=\"M15 7h6v6\"/>", "cal": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 10h18M8 3v4M16 3v4\"/>", "mail": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"m3 7 9 6 9-6\"/>", "folder": "<path d=\"M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2.5h8.5A1.5 1.5 0 0 1 21 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z\"/>", "contact": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><circle cx=\"12\" cy=\"10.5\" r=\"2.5\"/><path d=\"M7.5 17c.8-2 2.5-3 4.5-3s3.7 1 4.5 3\"/>", "db": "<ellipse cx=\"12\" cy=\"6\" rx=\"8\" ry=\"3\"/><path d=\"M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6\"/>", "search": "<circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m21 21-4.3-4.3\"/>", "moon": "<path d=\"M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z\"/>", "hour": "<path d=\"M6 3h12M6 21h12\"/><path d=\"M7 3v3.5a5 5 0 0 0 2 4L12 12l-3 1.5a5 5 0 0 0-2 4V21M17 3v3.5a5 5 0 0 1-2 4L12 12l3 1.5a5 5 0 0 1 2 4V21\"/>"};const S=p=>'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+p+'</svg>';
+const NAV=[['home','Accueil',S(P.home)],['agents','Agents',S(P.users)],['carriere','Carrière',S(P.trend)],['conges','Congés',S(P.cal)],['courriers','Courrier',S(P.mail)],['documents','Documents',S(P.folder)],['actesService','Actes de service','<span style="font-size:18px">▤</span>'],['archivesActes','Archives','<span style="font-size:18px">▣</span>'],['contacts','Contacts',S(P.contact)],['data','Données',S(P.db)]];
+function alerts(){const a=[],A=(k,r,t,l)=>a.push({k,id:r.id,t,l});
+db.agents.forEach(r=>{if(['Retraité','Décédé'].includes(r.statut))return;const n=agNm(r),rd=retD(r),na=nextAv(r);
+if(rd){const j=dd(rd);if(j<=180)A('agents',r,`${n} : ${j<0?'âge de la retraite dépassé':'départ à la retraite le '+fmt(rd)}`,j<0?2:1)}
+if(na){const j=dd(na);if(j<=90)A('agents',r,`${n} : avancement ${j<=0?'à examiner depuis le ':'prévu le '}${fmt(na)}`,j<=0?2:1)}});
+db.courriers.forEach(r=>{if(r.statut=='Traité'||!r.echeance)return;const j=dd(r.echeance);if(j<0)A('courriers',r,`${r.numero||''} ${r.objet} : en retard de ${-j} jour(s)`,2);else if(j<=3)A('courriers',r,`${r.numero||''} ${r.objet} : à traiter avant le ${fmt(r.echeance)}`,1)});
+db.documents.forEach(r=>{if(!r.expiration)return;const j=dd(r.expiration);if(j<=60)A('documents',r,`${r.titre} : ${j<0?'expiré':'expire le '+fmt(r.expiration)}`,j<0?2:1)});
+db.conges.forEach(r=>{if(r.statut=='Demandé')A('conges',r,`${who(r.agentId)} : demande de congé à décider`,1);else if(r.statut=='Accordé'&&r.fin&&dd(r.fin)>=0&&dd(r.fin)<=7)A('conges',r,`${who(r.agentId)} : reprise le ${fmt(r.fin)}`,0)});
+return a.sort((x,y)=>y.l-x.l)}
+function nav(){const n=alerts().length;$('#sd').innerHTML=`<div class="br"><i>${S(P.tree)}</i><div><b>Baobab</b><small>${esc(db.cfg.svc)||'Suite RH'}</small></div></div>`+NAV.map(([k,l,i])=>`<button class="${view==k?'on':''}" onclick="go('${k}')" aria-label="${l}"><b>${i}</b><span>${l}</span>${k=='home'&&n?`<em>${n}</em>`:''}</button>`).join('')+`<div class="sp"></div><button onclick="cpo()"><b>${S(P.search)}</b><span>Rechercher <small>Ctrl+K</small></span></button><button onclick="theme()"><b>${S(P.moon)}</b><span>Thème</span></button>`}
+function go(v){view=v;shut();nav();scrollTo(0,0);({home,carriere,data,actesService,archivesActes}[v]||(()=>list(v)))()}
+const head=(t,s,a='')=>`<div class="top"><div><h1>${t}</h1><p>${s}</p></div><div>${a}</div></div>`;
+function home(){const al=alerts(),A=db.agents,ret=A.filter(a=>retD(a)&&dd(retD(a))>=0&&dd(retD(a))<=730).length,el=A.filter(a=>nextAv(a)&&dd(nextAv(a))<=0&&a.statut!='Retraité').length,cr=db.courriers.filter(c=>c.statut!='Traité').length,h=new Date().getHours();
+const bars=(t,f)=>{const c={};A.forEach(a=>{const v=f(a)||'Non précisé';c[v]=(c[v]||0)+1});const m=Math.max(1,...Object.values(c));return `<div class="cd"><h3>${t}</h3>${Object.entries(c).sort((x,y)=>y[1]-x[1]).slice(0,7).map(([k,n])=>`<div class="bar"><span>${esc(k)}</span><u><i style="width:${n/m*100}%"></i></u><b>${n}</b></div>`).join('')||'<small>Aucune donnée</small>'}</div>`};
+$('#mn').innerHTML=head(`${h<12?'Bonjour':h<18?'Bon après-midi':'Bonsoir'}${db.cfg.svc?', '+esc(db.cfg.svc):''}`,new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'}))+
+`<div class="kp"><button style="--c:#2563eb" onclick="go('agents')"><b>${A.length}</b><span>Agents</span></button><button style="--c:#16a34a" onclick="go('conges')"><b>${A.filter(enC).length}</b><span>En congé aujourd’hui</span></button><button style="--c:#d97706" onclick="go('carriere')"><b>${el}</b><span>Avancements à examiner</span></button><button style="--c:#7c3aed" onclick="go('carriere')"><b>${ret}</b><span>Retraites sous 24 mois</span></button><button style="--c:#db2777" onclick="go('courriers')"><b>${cr}</b><span>Courriers en cours</span></button></div>
+<div class="gr"><div class="cd"><h3>À traiter aujourd’hui (${al.length})</h3>${al.length?al.slice(0,9).map(x=>`<div class="al" onclick="edit('${x.k}','${x.id}')"><i class="dt l${x.l}"></i><span>${esc(x.t)}</span></div>`).join(''):'<div class="em"><b>Rien d’urgent</b>Les échéances, avancements et retraites à venir apparaîtront ici.</div>'}</div>${bars('Agents par service',a=>a.service)}</div>
+<div class="gr" style="grid-template-columns:1fr 1fr 1fr">${bars('Par statut',st)}${bars('Par catégorie',a=>(a.categorie||'').split(/[\/\s-]/)[0])}${bars('Hommes / femmes',a=>a.sexe=='F'?'Femmes':a.sexe=='H'?'Hommes':'')}</div>
+${A.length?'':`<div class="cd em"><b>Bienvenue dans Baobab</b>Importez vos sauvegardes existantes ou explorez avec des données d’exemple.<br><br><button class="b p" onclick="go('data')">Ouvrir Données</button></div>`}`}
+function carriere(){const f=window.cf||'';const d=db.agents.filter(a=>!['Retraité','Décédé'].includes(a.statut)).map(a=>({a,v:nextAv(a),r:retD(a)})).filter(x=>!f||(f=='el'?x.v&&dd(x.v)<=0:x.r&&dd(x.r)<=730)).sort((x,y)=>(x.v||'9').localeCompare(y.v||'9'));
+$('#mn').innerHTML=head('Carrière','Avancements théoriques et départs à la retraite, calculés selon la catégorie',`<select class="b" onchange="cf=this.value;carriere()"><option value="">Tous les agents</option><option value="el" ${f=='el'?'selected':''}>Avancement à examiner</option><option value="rt" ${f=='rt'?'selected':''}>Retraite sous 24 mois</option></select>`)+
+`<div class="pn">${d.length?`<table><thead><tr><th>Agent</th><th>Catégorie</th><th>Ancienneté</th><th>Prochain avancement</th><th>Retraite (âge)</th></tr></thead><tbody>${d.map(({a,v,r})=>`<tr onclick="edit('agents','${a.id}')"><td><b>${esc(agNm(a))}</b><br><small>${esc(a.service||'')}</small></td><td>${esc(a.categorie||'—')}</td><td>${yrs(a.priseService||a.recrutement)??'—'} an(s)</td><td>${v?`<span class="bd ${dd(v)<=0?'ko':dd(v)<=90?'wa':''}">${fmt(v)}</span>`:'—'}</td><td>${r?fmt(r)+' <small>('+RA(a.categorie)+' ans)</small>':'—'}</td></tr>`).join('')}</tbody></table>`:'<div class="em"><b>Aucun agent à afficher</b>Renseignez les dates de naissance et de prise de service dans les dossiers.</div>'}</div>`}
+function list(k){const m=M[k],o=m.fo||m.f.find(x=>x[0]==m.fl)[3];$('#mn').innerHTML=head(m.l,m.sub,`<button class="b" onclick="csv('${k}')">Exporter CSV</button> <button class="b p" onclick="edit('${k}')">+ Nouveau ${m.one}</button>`)+`<div class="tl"><input id="q" type="search" placeholder="Rechercher…" oninput="rows('${k}')" aria-label="Rechercher"><select id="fl" onchange="rows('${k}')" aria-label="Filtrer"><option value="">Tous</option>${o.map(x=>`<option>${esc(x)}</option>`).join('')}</select></div><p class="hint" id="ct"></p><div class="pn" id="tb"></div>`;rows(k)}
+function rows(k){const m=M[k],q=($('#q').value||'').toLowerCase(),f=$('#fl').value,d=db[k].filter(r=>(!f||(k=='agents'?st(r):r[m.fl])==f)&&(!q||(Object.values(r).join(' ')+' '+(r.agentId?who(r.agentId):'')).toLowerCase().includes(q)));
+$('#ct').textContent=d.length+' sur '+db[k].length;
+$('#tb').innerHTML=d.length?`<table><thead><tr>${m.cols.map(c=>`<th>${c[0]}</th>`).join('')}</tr></thead><tbody>${d.map(r=>`<tr onclick="edit('${k}','${r.id}')">${m.cols.map(c=>`<td>${c[1](r)}</td>`).join('')}</tr>`).join('')}</tbody></table>`:`<div class="em"><b>${db[k].length?'Aucun résultat':'Aucun '+m.one+' enregistré'}</b>${db[k].length?'Modifiez la recherche ou le filtre.':`<button class="b p" onclick="edit('${k}')">Ajouter le premier ${m.one}</button>`}</div>`}
+function fld([k,l,t,o],r){const v=esc(r[k]??'');let i;
+if(t=='sel')i=`<select id="f_${k}">${o.map(x=>`<option ${r[k]==x?'selected':''}>${esc(x)}</option>`).join('')}</select>`;
+else if(t=='agent')i=`<select id="f_${k}"><option value="">Choisir…</option>${db.agents.map(a=>`<option value="${a.id}" ${r[k]==a.id?'selected':''}>${esc(agNm(a))}</option>`).join('')}</select>`;
+else if(t=='area')i=`<textarea id="f_${k}" rows="3">${v}</textarea>`;
+else i=`<input id="f_${k}" type="${t=='date'?'date':'text'}" value="${v}" ${t=='auto'?'readonly placeholder="Automatique"':''}>`;
+return `<label class="${t=='area'?'w':''}">${l}${i}</label>`}
+function edit(k,id){view=k;nav();const m=M[k],r=id?db[k].find(x=>x.id==id):{};cur={k,id,car:[...(r.carriere||[])]};
+const gen=id&&k=='agents'?`<div class="gen"><button class="b" onclick="gen('att','${id}')">Attestation de travail</button><button class="b" onclick="gen('cpr','${id}')">Certificat de présence</button><button class="b" onclick="gen('cps','${id}')">Prise de service</button></div>`:id&&k=='conges'?`<div class="gen"><button class="b" onclick="gen('dec','${r.agentId}','${id}')">Décision de congé</button></div>`:'';
+$('#dr').innerHTML=`<div class="dh"><h2>${id?esc(m.main(r)):'Nouveau '+m.one}</h2></div><div class="db">${gen}<div class="fg">${m.f.map(f=>fld(f,r)).join('')}</div><div class="inf" id="inf" ${k=='agents'||k=='conges'?'':'hidden'}></div>${k=='agents'?`<h3 class="sh">Historique de carrière</h3><div id="car"></div><div class="mini"><input id="cd" type="date"><select id="ct2">${['Recrutement','Titularisation','Avancement','Mutation','Affectation','Formation','Autre'].map(x=>`<option>${x}</option>`).join('')}</select><input id="ce" placeholder="Description (ex. passage de B/2 à B/3)" style="grid-column:1/3"><button class="b" onclick="addCar()">Ajouter l’événement</button></div>`:''}</div>
+<div class="df">${id?`<button class="b d" onclick="del()">Supprimer</button>`:''}<button class="b" onclick="shut()">Annuler</button><button class="b p" onclick="saveR()">Enregistrer</button></div>`;
+$('#dr').classList.add('on');$('#sc').classList.add('on');document.querySelectorAll('#dr input,#dr select').forEach(e=>e.addEventListener('input',info));info();car()}
+const shut=()=>{$('#dr').classList.remove('on');$('#sc').classList.remove('on')};
+const V=k=>($('#f_'+k)||{}).value||'';
+function info(){const e=$('#inf');if(!e||e.hidden)return;
+if(cur.k=='agents'){const nv=nextAv({dernierAv:V('dernierAv'),priseService:V('priseService'),recrutement:V('recrutement')}),rd=V('naissance')?addY(V('naissance'),RA(V('categorie'))):'';
+e.innerHTML=[yrs(V('naissance'))!=null?`Âge : <b>${yrs(V('naissance'))} ans</b>`:'',yrs(V('priseService')||V('recrutement'))!=null?`Ancienneté : <b>${yrs(V('priseService')||V('recrutement'))} an(s)</b>`:'',nv?`Prochain avancement : <b>${fmt(nv)}</b>`:'',rd?`Retraite : <b>${fmt(rd)}</b> (${RA(V('categorie'))} ans pour la catégorie ${esc(V('categorie')||'non précisée')})`:''].filter(Boolean).join('<br>')||'Renseignez les dates pour obtenir les calculs automatiques.'}
+else{const j=wd(V('debut'),V('fin')),id=V('agentId'),y=(V('debut')||TODAY).slice(0,4);e.innerHTML=(j?`Durée : <b>${j} jour(s) ouvré(s)</b>`:'Choisissez les dates (week-ends et jours fériés exclus).')+(id?`<br>Congé annuel ${y} : <b>${pris(id,y,cur.id)}</b> pris sur <b>${db.cfg.droit}</b>`:'')}}
+function car(){const e=$('#car');if(!e)return;e.innerHTML=cur.car.length?[...cur.car].sort((a,b)=>(b.d||'').localeCompare(a.d||'')).map(c=>`<div class="cl"><span>${fmt(c.d)}</span><span><b>${esc(c.type)}</b> ${esc(c.e)}</span></div>`).join(''):'<small>Aucun événement.</small>'}
+function addCar(){const d=$('#cd').value,t=$('#ct2').value,e=$('#ce').value.trim();if(!d&&!e){toast('Indiquez une date ou une description.');return}cur.car.push({d,type:t,e});if(t=='Avancement'&&d&&(!V('dernierAv')||V('dernierAv')<d))$('#f_dernierAv').value=d;$('#ce').value='';car();info()}
+function saveR(){const m=M[cur.k],o={};m.f.forEach(([k,,t])=>{if(t!='auto')o[k]=V(k).trim()});
+if(!o[m.req]){toast('Un champ obligatoire est vide : '+m.f.find(x=>x[0]==m.req)[1].toLowerCase()+'.');return}
+if(cur.k=='agents'){o.carriere=cur.car;const d=o.matricule&&db.agents.find(a=>a.id!=cur.id&&norm(a.matricule)==norm(o.matricule));if(d&&!confirm('Le matricule existe déjà pour '+agNm(d)+'. Enregistrer quand même ?'))return}
+if(cur.k=='conges'){if(o.debut&&o.fin){if(o.fin<o.debut){toast('La date de fin précède la date de début.');return}o.jours=wd(o.debut,o.fin);
+const ov=db.conges.filter(c=>c.id!=cur.id&&c.statut!='Refusé'&&c.agentId==o.agentId&&c.debut<=o.fin&&c.fin>=o.debut);if(ov.length&&!confirm('Cet agent a déjà un congé sur ces dates. Enregistrer quand même ?'))return;
+if(o.type=='Congé annuel'&&o.statut!='Refusé'){const y=o.debut.slice(0,4),p=pris(o.agentId,y,cur.id);if(p+o.jours>db.cfg.droit&&!confirm('Cette demande dépasse le droit annuel ('+(p+o.jours)+' j pour '+db.cfg.droit+'). Enregistrer quand même ?'))return}}}
+let r;if(cur.id){r=db[cur.k].find(x=>x.id==cur.id);Object.assign(r,o)}else{r={id:uid(),created:Date.now(),...o};if(cur.k=='courriers'){const p=r.type=='Départ'?'CD':'CA',y=(r.date||TODAY).slice(0,4);r.numero=`${p}-${y}-${String(db.courriers.filter(c=>(c.numero||'').startsWith(p+'-'+y)).length+1).padStart(4,'0')}`}db[cur.k].unshift(r)}
+persist();shut();go(cur.k);toast('Enregistré')}
+function del(){if(!confirm('Supprimer cet élément ? Cette action est définitive.'))return;db[cur.k]=db[cur.k].filter(x=>x.id!=cur.id);if(cur.k=='agents')db.conges=db.conges.filter(c=>c.agentId!=cur.id);persist();go(cur.k);toast('Supprimé')}
+const hdr=()=>`<div class="hd"><b>BURKINA FASO</b><br><i>La Patrie ou la Mort, nous vaincrons</i><p>${esc(db.cfg.svc)||'____________'}</p></div>`;
+function gen(kind,aid,cid){const a=db.agents.find(x=>x.id==aid),c=db.conges.find(x=>x.id==cid);if(!a)return;const n=esc(agNm(a)),idn=`<b>${n}</b>${a.matricule?`, matricule <b>${esc(a.matricule)}</b>`:''}${a.fonction?`, ${esc(a.fonction)}`:''}`,svc=esc(db.cfg.svc)||'____________',rl=`Je soussigné(e), responsable du service ${svc}, `;
+const T={att:['ATT','ATTESTATION DE TRAVAIL',`<p>${rl}atteste que ${idn}, exerce au sein de la structure${a.priseService?` depuis le <b>${fmt(a.priseService)}</b>`:''}.</p>`],cpr:['CPR','CERTIFICAT DE PRÉSENCE',`<p>${rl}certifie que ${idn}, est présent(e) à son poste à la date du <b>${fmt(TODAY)}</b>.</p>`],cps:['CPS','CERTIFICAT DE PRISE DE SERVICE',`<p>${rl}certifie que ${idn}, a effectivement pris service le <b>${fmt(a.priseService)}</b>.</p>`],dec:['DC','DÉCISION D’OCTROI DE CONGÉ',c?`<p><b>Article 1 :</b> ${idn}, est autorisé(e) à bénéficier d’un(e) <b>${esc(c.type)}</b> du <b>${fmt(c.debut)}</b> au <b>${fmt(c.fin)}</b>, soit <b>${c.jours||0}</b> jour(s) ouvré(s).</p><p><b>Article 2 :</b> La présente décision prend effet à compter de sa signature.</p>`:'']}[kind];
+const y=new Date().getFullYear(),num=`${T[0]}-${y}-${String(db.actes.filter(x=>x.num.startsWith(T[0]+'-'+y)).length+1).padStart(4,'0')}`;db.actes.unshift({num,type:T[1],agent:agNm(a),t:Date.now()});persist();
+$('#paper').innerHTML=`<div class="tb"><button class="b p" onclick="print()">Imprimer / enregistrer en PDF</button><button class="b" onclick="$('#paper').classList.remove('on')">Fermer</button></div><div class="pg">${hdr()}<h1>${T[1]}</h1><p style="text-align:center">N° ${num}</p>${T[2]}${kind=='dec'?'':'<p>En foi de quoi, le présent document est délivré pour servir et valoir ce que de droit.</p>'}<p style="text-align:right">Fait à ____________, le ${fmt(TODAY)}</p><div class="sg">Le responsable<br><br><br>____________________</div></div>`;$('#paper').classList.add('on')}
+
+function actesService(){
+ const agents=[...db.agents].sort((a,b)=>agNm(a).localeCompare(agNm(b),'fr'));
+ $('#mn').innerHTML=head('Actes de service','Préparer, vérifier et imprimer les certificats de prise de service et de cessation de service',
+ `<button class="b" onclick="go('agents')">Ouvrir les dossiers agents</button>`)
+ +`<div class="gr" style="grid-template-columns:minmax(280px,1fr) minmax(280px,1fr)">
+ <section class="cd"><h3>1. Informations du certificat</h3>
+ <div class="fg">
+ <label class="w">Type de certificat
+ <select id="as_type" onchange="asTypeChange()"><option value="prise">Certificat de prise de service</option><option value="cessation">Certificat de cessation de service</option><option value="decision">Décision d’affectation</option></select></label>
+ <label class="w">Agent
+ <select id="as_agent" onchange="asAgentChange()"><option value="">Choisir un agent…</option>${agents.map(a=>`<option value="${esc(a.id)}">${esc(agNm(a))}${a.matricule?' — '+esc(a.matricule):''}</option>`).join('')}</select></label>
+ <label>Date de prise de service<input id="as_prise" type="date"></label>
+ <label id="as_cess_wrap" hidden>Date de cessation<input id="as_cess" type="date"></label>
+ <label class="w decision-only" hidden>Numéro / référence de la décision<input id="as_dec_ref" placeholder="Ex. 2026-0000/MSJE/SG/DRH"></label>
+ <label class="w decision-only" hidden>Objet de la décision<input id="as_dec_objet" value="Portant affectation de l’agent" placeholder="Objet de la décision"></label>
+ <label class="w decision-only" hidden>Service d’origine<input id="as_dec_origine" placeholder="Service ou structure d’origine"></label>
+ <label class="w decision-only" hidden>Service / structure d’affectation<input id="as_dec_destination" placeholder="Direction ou service d’affectation"></label>
+ <label class="w decision-only" hidden>Motif / considérant<input id="as_dec_motif" value="Considérant les nécessités de service." placeholder="Motif administratif"></label>
+ <label class="w decision-only" hidden>Autorité signataire de la décision<input id="as_dec_autorite" value="Pour le Ministre et par délégation, la Secrétaire Générale"></label>
+ <label class="w decision-only" hidden>Articles complémentaires (facultatif)<textarea id="as_dec_articles" rows="2" placeholder="Autres articles ou dispositions particulières"></textarea></label>
+ <label class="w">Motif de cessation (si applicable)<input id="as_motif" placeholder="Ex. mutation, admission à la retraite, fin de fonctions…"></label>
+ <label class="w">Service / administration émettrice<input id="as_service" value="${esc(db.cfg.svc||'')}" placeholder="Nom officiel du service"></label>
+ <label>Lieu de signature<input id="as_lieu" placeholder="Ex. Ouagadougou"></label>
+ <label>Date de signature<input id="as_signature" type="date" value="${TODAY}"></label>
+ <label class="w">Qualité de l’autorité signataire<input id="as_signataire" value="Le Directeur des Ressources Humaines" placeholder="Ex. Le Directeur des Ressources Humaines"></label>
+ <label>Nom du signataire<input id="as_nom_signataire" placeholder="Nom et prénoms du signataire"></label>
+ <label>Distinction / décoration (facultatif)<input id="as_distinction" placeholder="Ex. Chevalier de l’Ordre National"></label>
+ <label class="w">Acte administratif de référence (prise de service)<input id="as_acte" placeholder="Ex. reclassé et mis à la disposition suivant arrêté n°…"></label>
+ <label>Date de l’acte administratif<input id="as_acte_date" type="date"></label>
+ <label class="w">Référence / numéro du certificat<input id="as_ref" placeholder="Référence administrative du certificat (facultatif)"></label>
+ </div>
+ <div class="inf">Vérifiez les dates et les informations administratives avant impression. Le certificat est un modèle à valider et signer par l’autorité compétente.</div>
+ <button class="b p" onclick="asPreview()">Générer le certificat</button>
+ </section>
+ <section class="cd"><h3>2. Registre des actes récents</h3>
+ <p class="hint">Les certificats générés apparaissent ici et dans le registre général des actes, rubrique Données.</p>
+ ${db.actes.filter(x=>!x.archived).length?
+ `<div class="pn"><table><thead><tr><th>N°</th><th>Type</th><th>Agent</th><th>Date</th><th>Action</th></tr></thead><tbody>${db.actes.filter(x=>!x.archived).slice(0,20).map(x=>`<tr><td>${esc(x.num)}</td><td>${esc(x.type)}</td><td>${esc(x.agent)}</td><td>${new Date(x.t).toLocaleDateString('fr-FR')}</td><td><button class="b" onclick="archiverActe('${esc(x.num)}')">Archiver</button></td></tr>`).join('')}</tbody></table></div>`:
+ `<div class="em"><b>Aucun acte généré</b>Les certificats et décisions créés seront listés ici.</div>`}
+ </section></div>`;
+ asAgentChange();
+}
+function asTypeChange(){
+ const k=$('#as_type').value,cessation=k==='cessation',decision=k==='decision';
+ $('#as_cess_wrap').hidden=!cessation;
+ document.querySelectorAll('.decision-only').forEach(e=>e.hidden=!decision);
+ $('#as_motif').closest('label').hidden=decision;
+ $('#as_acte').closest('label').hidden=decision;$('#as_acte_date').closest('label').hidden=decision;
+ $('#as_motif').placeholder=cessation?'Ex. mutation, admission à la retraite, fin de fonctions…':'Sans objet pour une prise de service';
+}
+function asAgentChange(){
+ const id=$('#as_agent').value,a=db.agents.find(x=>x.id===id);
+ if(!a)return;
+ $('#as_prise').value=a.priseService||'';
+ $('#as_service').value=db.cfg.svc||a.service||'';
+}
+function asPreview(){
+ const kind=$('#as_type').value,id=$('#as_agent').value,a=db.agents.find(x=>x.id===id);
+ if(!a){toast('Sélectionnez un agent.');return}
+ const prise=$('#as_prise').value,cess=$('#as_cess').value,signature=$('#as_signature').value;
+ if(kind==='prise'&&!prise){toast('Renseignez la date de prise de service.');return}
+ if(kind==='decision'&&!$('#as_dec_destination').value.trim()){toast('Renseignez le service ou la structure d’affectation.');return}
+ if(kind==='cessation'&&!cess){toast('Renseignez la date de cessation de service.');return}
+ if(kind==='cessation'&&prise&&cess<prise){toast('La cessation ne peut pas précéder la prise de service.');return}
+ const service=$('#as_service').value.trim()||db.cfg.svc||'MINISTÈRE / ADMINISTRATION',
+ lieu=$('#as_lieu').value.trim()||'Ouagadougou',
+ qualite=$('#as_signataire').value.trim()||'Le Directeur des Ressources Humaines',
+ nomSignataire=$('#as_nom_signataire').value.trim(),
+ distinction=$('#as_distinction').value.trim(),
+ acte=$('#as_acte').value.trim(),acteDate=$('#as_acte_date').value,
+ ref=$('#as_ref').value.trim(),
+ type=kind==='prise'?'CERTIFICAT DE PRISE DE SERVICE':kind==='cessation'?'CERTIFICAT DE CESSATION DE SERVICE':'DÉCISION D’AFFECTATION',
+ prefix=kind==='prise'?'CPS':kind==='cessation'?'CCS':'DEC',year=(signature||TODAY).slice(0,4),
+ num=`${prefix}-${year}-${String(db.actes.filter(x=>(x.num||'').startsWith(prefix+'-'+year)).length+1).padStart(4,'0')}`;
+ const nom=esc(agNm(a)),mat=a.matricule?`, matricule <b>${esc(a.matricule)}</b>`:'',
+ fonction=a.fonction?`, ${esc(a.fonction)}`:'',
+ affectation=a.service?`, en service à ${esc(a.service)}`:'',
+ situation=acte?`, ${esc(acte)}`:'',
+ base=acteDate?` du ${fmt(acteDate)}`:'',
+ intro=kind==='prise'
+ ?`Le Directeur des Ressources Humaines du ${esc(service)} soussigné, certifie que le camarade <b>${nom}</b>${mat}${fonction}${situation}${base}, a effectivement pris service le <b>${fmt(prise)}</b>.`
+ :`Le Directeur des Ressources Humaines du ${esc(service)} soussigné, certifie que le camarade <b>${nom}</b>${mat}${fonction}${affectation}, a effectivement cessé ses fonctions le <b>${fmt(cess)}</b>${$('#as_motif').value.trim()?`, pour le motif suivant : <b>${esc($('#as_motif').value.trim())}</b>`:''}.`;
+ const ampliations=['Original','CAB','ITS','SG','DAD','Intéressé','Dossier intéressé'];
+ db.actes.unshift({num,type,agent:agNm(a),t:Date.now(),agentId:a.id,priseService:prise||'',cessationService:cess||'',reference:ref,acte:acte,acteDate:acteDate,service,lieu,qualite,nomSignataire,distinction,motif:$('#as_motif').value.trim(),destination:$('#as_dec_destination').value.trim(),origine:$('#as_dec_origine').value.trim(),articles:$('#as_dec_articles').value.trim()});
+ persist();
+ const decision=kind==='decision';
+ const decRef=$('#as_dec_ref').value.trim()||num, decObjet=$('#as_dec_objet').value.trim()||'Portant affectation de l’agent',dest=$('#as_dec_destination').value.trim(),orig=$('#as_dec_origine').value.trim(),motif=$('#as_dec_motif').value.trim()||'Considérant les nécessités de service.',autorite=$('#as_dec_autorite').value.trim(),articles=$('#as_dec_articles').value.trim();
+ if(decision){
+   const vugs=['la Constitution','les textes législatifs et réglementaires en vigueur','les nécessités de service'];
+   db.actes.unshift({num,type,agent:agNm(a),t:Date.now(),agentId:a.id,reference:decRef,objet:decObjet,destination:dest,origine:orig,motif,articles,service,lieu,qualite:autorite||qualite,nomSignataire,distinction,decision:true});persist();
+   $('#paper').innerHTML=`<div class="tb"><button class="b p" onclick="window.print()">Imprimer / enregistrer en PDF</button><button class="b" onclick="$('#paper').classList.remove('on');go('actesService')">Fermer</button></div><div class="pg official-doc">
+   <div class="official-head"><div class="left"><div class="ministry">${esc(service)}</div><div style="text-align:center;margin:5px 0">**************</div><div style="font-weight:bold">SECRÉTARIAT GÉNÉRAL</div><div style="text-align:center;margin:5px 0">**************</div><div style="font-weight:bold">DIRECTION DES RESSOURCES HUMAINES</div></div><div class="right"><div style="font-weight:bold;font-size:13pt">BURKINA FASO</div><div><i>La Patrie ou la Mort, nous vaincrons</i></div><div style="margin-top:8px">********</div></div></div>
+   <div class="official-meta"><div>${esc(lieu)}, le ${fmt(signature)}</div><div style="margin-top:18px"><b>Décision n° ${esc(decRef)} / ${esc(service.toUpperCase().replace(/\s+/g,''))}/SG/DRH</b><br><i>${esc(decObjet)}</i></div></div>
+   <h1 style="border:1px solid #333;padding:8px;font-size:13pt">LE MINISTRE / L’AUTORITÉ COMPÉTENTE</h1>
+   <div class="official-body" style="line-height:1.8"><p><b>Vu</b> la Constitution ;</p><p><b>Vu</b> les textes législatifs et réglementaires applicables à la Fonction publique ;</p><p><b>Vu</b> les textes portant organisation et attributions de ${esc(service)} ;</p>${orig?`<p><b>Vu</b> la situation administrative de l’intéressé et son service d’origine (${esc(orig)}) ;</p>`:''}<p><b>Considérant</b> ${esc(motif.replace(/^Considérant\s*/i,''))}</p><h2 style="text-align:center;letter-spacing:4px;margin:30px 0">— D É C I D E —</h2><p><b><u>Article 1 :</u></b> ${esc(agNm(a))}${a.matricule?', matricule '+esc(a.matricule):''}${a.fonction?', '+esc(a.fonction):''}, est affecté(e) à <b>${esc(dest)}</b>${prise?' à compter de la date de prise de service du '+fmt(prise):' pour nécessité de service'}.</p><p><b><u>Article 2 :</u></b> La présente décision prend effet conformément aux dispositions applicables. Elle sera enregistrée, publiée et communiquée partout où besoin sera.</p>${articles?articles.split(/\\n+/).map((line,i)=>`<p><b><u>Article ${i+3} :</u></b> ${esc(line)}</p>`).join(''):''}</div>
+   <div class="sg">${esc(autorite||qualite)}<br><br><br><br>${nomSignataire?`<b><u>${esc(nomSignataire)}</u></b><br>`:''}${distinction?`<span class="sealnote">${esc(distinction)}</span>`:'<span class="sealnote">Nom, signature et cachet</span>'}</div><div class="ampliations"><u>Ampliations :</u>${['Original','CAB','ITS','DRH','DAD','Intéressé','Dossier intéressé'].map(x=>`<div>- &nbsp; ${x} ;</div>`).join('')}</div></div>`;
+ }else{
+ db.actes.unshift({num,type,agent:agNm(a),t:Date.now(),agentId:a.id,priseService:prise||'',cessationService:cess||'',reference:ref,acte:acte,acteDate:acteDate,service,lieu,qualite,nomSignataire,distinction,motif:$('#as_motif').value.trim(),destination:$('#as_dec_destination').value.trim(),origine:$('#as_dec_origine').value.trim(),articles:$('#as_dec_articles').value.trim()});persist();
+ $('#paper').innerHTML=`<div class="tb"><button class="b p" onclick="window.print()">Imprimer / enregistrer en PDF</button><button class="b" onclick="$('#paper').classList.remove('on');go('actesService')">Fermer</button></div>
+ <div class="pg official-doc"><div class="official-head"><div class="left"><div class="ministry">${esc(service)}</div><div style="text-align:center;margin:5px 0">******</div><div style="font-weight:bold">SECRÉTARIAT GÉNÉRAL</div><div style="text-align:center;margin:5px 0">******</div><div style="font-weight:bold">DIRECTION DES RESSOURCES HUMAINES</div></div><div class="right"><div style="font-weight:bold;font-size:13pt">BURKINA FASO</div><div>La Patrie ou la Mort, nous vaincrons</div></div></div><div class="official-meta"><div>N° ${ref?esc(ref):num} / ${esc(service.toUpperCase().replace(/\s+/g,''))}/SG/DRH</div><div>${esc(lieu)}, le ${fmt(signature)}</div></div><h1>${type}</h1><div class="official-body"><p>${intro}</p><p>En foi de quoi, le présent certificat est établi pour servir et valoir ce que de droit.</p></div><div class="sg">${esc(qualite)}<br><br><br><br>${nomSignataire?`<b><u>${esc(nomSignataire)}</u></b><br>`:''}${distinction?`<span class="sealnote">${esc(distinction)}</span>`:'<span class="sealnote">Nom, signature et cachet</span>'}</div><div class="ampliations"><u>Ampliations :</u>${ampliations.map(x=>`<div>- &nbsp; ${x} ;</div>`).join('')}</div></div>`;
+ }
+ $('#paper').classList.add('on');
+}
+
+function archiverActe(num){
+ const a=db.actes.find(x=>x.num===num);
+ if(!a){toast('Acte introuvable.');return}
+ if(!confirm('Archiver définitivement cet acte dans la rubrique Archives ?'))return;
+ a.archived=true;a.archivedAt=Date.now();
+ db.archivesActes=db.archivesActes||[];
+ db.archivesActes.unshift({...a});
+ db.actes=db.actes.filter(x=>x.num!==num);
+ persist();nav();
+ if(view==='archivesActes')archivesActes();else actesService();
+ toast('Acte archivé avec succès.');
+}
+function regenererArchive(num){
+ const a=(db.archivesActes||[]).find(x=>x.num===num);
+ if(!a){toast('Archive introuvable.');return}
+ const agent=(db.agents||[]).find(x=>x.id===a.agentId)||null;
+ const nom=esc(a.agent|| (agent?agNm(agent):'Agent non identifié'));
+ const matricule=agent&&agent.matricule?`, matricule <b>${esc(agent.matricule)}</b>`:'';
+ const fonction=agent&&agent.fonction?`, ${esc(agent.fonction)}`:'';
+ const service=esc(a.service||db.cfg.svc||'MINISTÈRE / ADMINISTRATION');
+ const dateGen=a.t?new Date(a.t).toLocaleDateString('fr-FR'):'—';
+ const isDec=/décision|affectation/i.test(a.type||'')||a.decision;
+ const isCess=/cessation/i.test(a.type||'');
+ const prise=a.priseService||(agent&&agent.priseService)||'';
+ const cess=a.cessationService||'';
+ const body=isDec
+ ? `<p><b>Vu</b> les textes législatifs et réglementaires applicables à la Fonction publique ;</p><p><b>Vu</b> les nécessités de service ;</p>${a.origine?`<p><b>Vu</b> la situation administrative de l’intéressé et son service d’origine (${esc(a.origine)}) ;</p>`:''}<p><b>Considérant</b> ${esc(a.motif||'les nécessités de service')}</p><h2 style="text-align:center;letter-spacing:4px;margin:26px 0">— D É C I D E —</h2><p><b><u>Article 1 :</u></b> ${nom}${matricule}${fonction}, est affecté(e) à <b>${esc(a.destination||'________________')}</b>${prise?' à compter du '+fmt(prise):''}.</p><p><b><u>Article 2 :</u></b> La présente décision prend effet conformément aux dispositions applicables. Elle sera communiquée partout où besoin sera.</p>${a.articles?`<p>${esc(a.articles)}</p>`:''}`
+ : isCess
+ ? `<p>Le responsable du service ${service} soussigné, certifie que ${nom}${matricule}${fonction}, a effectivement cessé ses fonctions le <b>${cess?fmt(cess):'________________'}</b>${a.motif?`, pour le motif suivant : <b>${esc(a.motif)}</b>`:''}.</p><p>En foi de quoi, le présent certificat est établi pour servir et valoir ce que de droit.</p>`
+ : `<p>Le responsable du service ${service} soussigné, certifie que ${nom}${matricule}${fonction}, a effectivement pris service le <b>${prise?fmt(prise):'________________'}</b>.</p><p>En foi de quoi, le présent certificat est établi pour servir et valoir ce que de droit.</p>`;
+ const title=esc(a.type||'ACTE ADMINISTRATIF');
+ $('#paper').innerHTML=`<div class="tb"><button class="b p" onclick="window.print()">Imprimer / enregistrer en PDF</button><button class="b" onclick="$('#paper').classList.remove('on');go('archivesActes')">Fermer</button></div><div class="pg official-doc"><div class="official-head"><div class="left"><div class="ministry">${service}</div><div style="text-align:center;margin:5px 0">******</div><div style="font-weight:bold">SECRÉTARIAT GÉNÉRAL</div><div style="text-align:center;margin:5px 0">******</div><div style="font-weight:bold">DIRECTION DES RESSOURCES HUMAINES</div></div><div class="right"><div style="font-weight:bold;font-size:13pt">BURKINA FASO</div><div>La Patrie ou la Mort, nous vaincrons</div></div></div><div class="official-meta"><div>N° ${esc(a.reference||a.num)}</div><div>Document généré le ${dateGen}</div></div><h1>${title}</h1><div class="official-body">${body}</div><div class="sg">${esc(a.qualite||'Le Directeur des Ressources Humaines')}<br><br><br><br>${a.nomSignataire?`<b><u>${esc(a.nomSignataire)}</u></b><br>`:''}<span class="sealnote">Nom, signature et cachet</span></div><div class="ampliations"><u>Ampliations :</u><div>- Original ;</div><div>- SG ;</div><div>- DRH ;</div><div>- Intéressé ;</div><div>- Dossier intéressé.</div></div></div>`;
+ $('#paper').classList.add('on');
+}
+
+function restaurerActe(num){
+ const i=(db.archivesActes||[]).findIndex(x=>x.num===num);
+ if(i<0)return;
+ const a={...db.archivesActes[i]};delete a.archived;delete a.archivedAt;
+ db.actes.unshift(a);db.archivesActes.splice(i,1);persist();nav();archivesActes();toast('Acte restauré dans Actes de service.');
+}
+function supprimerArchive(num){
+ if(!confirm('Supprimer définitivement cet acte des archives ? Cette action est irréversible.'))return;
+ db.archivesActes=(db.archivesActes||[]).filter(x=>x.num!==num);persist();archivesActes();toast('Archive supprimée.');
+}
+function archivesActes(){
+ db.archivesActes=Array.isArray(db.archivesActes)?db.archivesActes:[];
+ const legacy=(db.actes||[]).filter(a=>a.archived);legacy.forEach(a=>{if(!db.archivesActes.some(x=>x.num===a.num))db.archivesActes.unshift({...a,archivedAt:a.archivedAt||Date.now()})});if(legacy.length){db.actes=db.actes.filter(a=>!a.archived);persist()}
+ const all=db.archivesActes;
+ $('#mn').innerHTML=head('Archives des actes de service','Consulter, restaurer ou supprimer les actes archivés',
+ `<button class="b" onclick="go('actesService')">Retour aux actes de service</button>`)
+ +`<div class="cd"><h3>Actes archivés (${all.length})</h3>
+ <p class="hint">Les actes archivés sont conservés dans le stockage de cette application et restent inclus dans la sauvegarde générale.</p>
+ ${all.length?`<div class="pn"><table><thead><tr><th>N°</th><th>Type</th><th>Agent</th><th>Date de génération</th><th>Date d’archivage</th><th>Actions</th></tr></thead><tbody>${all.map(a=>`<tr><td>${esc(a.num)}</td><td>${esc(a.type)}</td><td>${esc(a.agent)}</td><td>${a.t?new Date(a.t).toLocaleDateString('fr-FR'):'—'}</td><td>${a.archivedAt?new Date(a.archivedAt).toLocaleDateString('fr-FR'):'—'}</td><td><button class="b p" onclick="regenererArchive('${esc(a.num)}')">Régénérer / imprimer</button> <button class="b" onclick="restaurerActe('${esc(a.num)}')">Restaurer</button> <button class="b d" onclick="supprimerArchive('${esc(a.num)}')">Supprimer</button></td></tr>`).join('')}</tbody></table></div>`:`<div class="em"><b>Aucune archive pour le moment</b>Dans Actes de service, générez un certificat ou une décision, puis cliquez sur « Archiver » à côté de l’acte.</div>`}
+ </div>`;
+}
+function csv(k){const m=M[k],q=v=>'"'+String(v??'').replace(/"/g,'""')+'"',L=[m.f.map(f=>q(f[1])).join(';'),...db[k].map(r=>m.f.map(f=>q(f[2]=='agent'?who(r[f[0]]):r[f[0]])).join(';'))].join('\r\n');dl('\ufeff'+L,m.l+'_'+TODAY+'.csv','text/csv;charset=utf-8')}
+const dl=(t,n,ty)=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:ty}));a.download=n;a.click()};
+function data(){$('#mn').innerHTML=head('Données','Sauvegarde, import de vos anciennes applications et paramètres')+
+`<div class="gr" style="grid-template-columns:1fr 1fr"><div class="cd"><h3>Reprendre vos données</h3><p class="hint">Importez la sauvegarde de Gestion Administrative (.json), d’État Nominatif ou de SGC-FP. Les agents déjà présents (même matricule) sont ignorés.</p><p><label class="b p">Importer un fichier .json<input type="file" accept=".json" hidden onchange="imp(this.files[0])"></label> <button class="b" onclick="demo()">Données d’exemple</button></p><p class="hint">Les pièces jointes (PDF, scans) des anciennes sauvegardes ne sont pas reprises.</p></div>
+<div class="cd"><h3>Sauvegarde</h3><p class="hint">Les données restent dans ce navigateur. Exportez une copie régulièrement.</p><p><button class="b p" onclick="dl(JSON.stringify({v:'baobab',...db}),'Baobab_'+TODAY+'.json','application/json')">Sauvegarder (.json)</button> <button class="b d" onclick="reset()">Tout effacer</button></p></div></div>
+<div class="cd" style="margin-bottom:16px"><h3>Paramètres</h3><div class="fg"><label class="w">Nom du service (en-tête des documents)<input id="s_svc" value="${esc(db.cfg.svc)}"></label><label>Délai entre deux avancements (années)<input id="s_av" type="number" min="1" value="${db.cfg.av}"></label><label>Droit annuel de congé (jours)<input id="s_dr" type="number" min="0" value="${db.cfg.droit}"></label></div><p><button class="b p" onclick="db.cfg={svc:$('#s_svc').value.trim(),av:+$('#s_av').value||2,droit:+$('#s_dr').value||0};persist();nav();toast('Paramètres enregistrés')">Enregistrer</button></p></div>
+<div class="cd"><h3>Registre des actes délivrés</h3>${db.actes.length?`<table><thead><tr><th>N°</th><th>Acte</th><th>Agent</th><th>Date</th></tr></thead><tbody>${db.actes.slice(0,15).map(a=>`<tr><td>${a.num}</td><td>${esc(a.type)}</td><td>${esc(a.agent)}</td><td>${new Date(a.t).toLocaleDateString('fr-FR')}</td></tr>`).join('')}</tbody></table>`:'<small>Aucun acte délivré pour le moment.</small>'}</div>`}
+const sn=s=>{const w=String(s||'').trim().split(/\s+/),i=w.findIndex(x=>x!==x.toUpperCase());return i<=0?[w[0]||'',w.slice(1).join(' ')]:[w.slice(0,i).join(' '),w.slice(i).join(' ')]};
+async function imp(f){if(!f)return;let j;try{j=JSON.parse(await f.text())}catch(e){toast('Fichier illisible : ce n’est pas un JSON valide.');return}
+if(j.v=='baobab'){if(!confirm('Remplacer toutes les données par cette sauvegarde Baobab ?'))return;db=Object.assign({agents:[],conges:[],courriers:[],documents:[],contacts:[],actes:[],archivesActes:[],cfg:{}},j);delete db.v;persist();go('home');toast('Sauvegarde restaurée');return}
+const S=j.db||j,keys=new Set(db.agents.map(a=>norm(a.matricule)).filter(Boolean)),G=x=>(S[x]||[]),sx=s=>/^f/i.test(s||'')?'F':'H';let n=0,o=0;
+const MS={ACTIF:'En activité',DETACHE:'Détaché',DISPONIBILITE:'Disponibilité',RETRAITE:'Retraité',DECEDE:'Décédé'};
+G('agents').forEach(r=>{const m=norm(r.matricule);if(m&&keys.has(m))return;keys.add(m);let a,cg=[];
+if(r.nom_prenoms){const[nom,pre]=sn(r.nom_prenoms);a={matricule:r.matricule,nom,prenoms:pre,sexe:sx(r.sexe),naissance:r.date_naissance,lieu:r.lieu_naissance,service:r.service,categorie:r.cat_echelle,fonction:r.fonction||r.emploi,statut:r.statut||'En activité',recrutement:r.date_recrutement,priseService:r.date_prise_service,tel:r.contact,email:r.email,notes:r.observations,carriere:(r.carriere||[]).map(c=>({d:c.date,type:c.type,e:c.description||''}))};cg=(r.conges||[]).map(c=>({type:/admin/i.test(c.type)?'Congé annuel':c.type,debut:c.date_debut,fin:c.date_fin,motif:c.motif,statut:'Accordé'}))}
+else if(r.gradeId!==undefined){const g=G('grades').find(x=>x.id==r.gradeId)||{},c=G('corps').find(x=>x.id==g.corpsId)||{},av=G('avancements').filter(x=>x.agentId==r.id);a={matricule:r.matricule,nom:r.nom,prenoms:r.prenoms,sexe:r.sexe,naissance:r.dateNaissance,lieu:r.lieuNaissance,service:(G('structures').find(x=>x.id==r.structureId)||{}).nom,categorie:c.categorie?c.categorie+'/'+g.echelon:'',grade:c.code?`${c.code} classe ${g.classe}, échelon ${g.echelon}`:'',fonction:r.poste,statut:MS[r.statut]||'En activité',recrutement:r.dateRecrutement,priseService:r.datePriseService,dernierAv:av.map(x=>x.dateEffet).sort().pop(),tel:r.telephone,email:r.email,carriere:av.map(x=>({d:x.dateEffet,type:'Avancement',e:x.referenceActe||''}))};
+cg=G('conges').filter(c=>c.agentId==r.id).map(c=>({type:c.type=='ANNUEL'?'Congé annuel':c.type=='MALADIE'?'Maladie':'Autre',debut:c.dateDebut,fin:c.dateFin,motif:c.motif,statut:c.statut=='APPROUVE'?'Accordé':c.statut=='REJETE'?'Refusé':'Demandé'}))}
+else{a={...r,sexe:sx(r.sexe),lieu:r.lieu_naissance,priseService:r.date_prise_service,recrutement:r.date,carriere:r.carriere||[]};['files','pieces','photo','created','by','date','lieu_naissance','date_prise_service'].forEach(k=>delete a[k])}
+a.id=uid();db.agents.push(a);n++;cg.forEach(c=>{db.conges.push({id:uid(),agentId:a.id,...c,jours:wd(c.debut,c.fin)});o++})});
+G('conges').filter(c=>c.agent).forEach(c=>{const a=db.agents.find(x=>agNm(x)==c.agent);if(a){db.conges.push({id:uid(),agentId:a.id,type:c.type,debut:c.debut,fin:c.fin,motif:c.motif,statut:['Demandé','Accordé','Refusé'].includes(c.statut)?c.statut:'Demandé',jours:wd(c.debut,c.fin)});o++}});
+['courriers','documents','contacts'].forEach(k=>G(k).forEach(r=>{if(db[k].some(x=>(r.numero||r.ref||r.email)&&(x.numero==r.numero&&r.numero||x.ref==r.ref&&r.ref||x.email==r.email&&r.email)))return;const x={...r,id:uid()};delete x.files;db[k].push(x);o++}));
+persist();go('home');toast(`${n} agent(s) et ${o} autre(s) élément(s) importé(s)`)}
+function demo(){if(db.agents.length&&!confirm('Ajouter des données d’exemple aux données existantes ?'))return;const y=n=>addY(TODAY,-n),A=(m,nom,pre,sx,nai,cat,fn,sv,ps,av)=>{const a={id:uid(),matricule:m,nom,prenoms:pre,sexe:sx,naissance:nai,categorie:cat,fonction:fn,service:sv,statut:'En activité',priseService:ps,dernierAv:av||'',carriere:[],grade:''};db.agents.push(a);return a};
+const a1=A('100001','OUEDRAOGO','Awa','F',y(36),'A/2','Chef de service','SGRH',y(11),y(2)),a2=A('100002','SAWADOGO','Issa','H',y(32),'B/1','Assistant GRH','SGRH',y(6),y(2)),a3=A('100003','KABORE','Mariam','F',y(57),'B/3','Secrétaire','Secrétariat',y(30),y(5)),a4=A('100004','ZONGO','Paul','H',y(29),'C/1','Agent','Comptabilité',y(3));
+db.conges.push({id:uid(),agentId:a2.id,type:'Congé annuel',debut:TODAY,fin:addD(7),statut:'Accordé',jours:wd(TODAY,addD(7)),motif:''},{id:uid(),agentId:a4.id,type:'Congé annuel',debut:addD(20),fin:addD(34),statut:'Demandé',jours:wd(addD(20),addD(34)),motif:''});
+db.courriers.push({id:uid(),numero:'CA-'+new Date().getFullYear()+'-0001',type:'Arrivée',objet:'Demande d’état des effectifs',correspondant:'Direction régionale',date:TODAY,echeance:addD(-2),statut:'En cours'});
+db.documents.push({id:uid(),titre:'Note de service sur les horaires',ref:'2026-056',type:'Note de service',date:TODAY,service:'SGRH',emplacement:'Classeur A'});persist();go('home');toast('Données d’exemple ajoutées')}
+function addD(n){const d=new Date();d.setDate(d.getDate()+n);return iso(d)}
+function reset(){if(confirm('Effacer toutes les données de ce navigateur ?')&&confirm('Dernière confirmation : cette action est irréversible.')){db={agents:[],conges:[],courriers:[],documents:[],contacts:[],actes:[],cfg:{svc:'',av:2,droit:30}};persist();go('home')}}
+function theme(){const d=document.documentElement,x=(d.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))=='dark'?'light':'dark';d.dataset.theme=x;try{localStorage.setItem('baobab_th',x)}catch(e){}}
+try{const t=localStorage.getItem('baobab_th');if(t)document.documentElement.dataset.theme=t}catch(e){}
+const ACT=[['Nouvel agent',()=>edit('agents')],['Nouvelle demande de congé',()=>edit('conges')],['Nouveau courrier',()=>edit('courriers')],['Nouveau document',()=>edit('documents')],['Imprimer prise / cessation de service',()=>go('actesService')],['Ouvrir Données et sauvegarde',()=>go('data')]];let cpl=[];
+function cpo(){$('#cp').classList.add('on');$('#cpi').value='';cps();$('#cpi').focus()}const cpx=()=>$('#cp').classList.remove('on');
+function cps(){const q=$('#cpi').value.toLowerCase().trim();cpl=q?[].concat(...['agents','courriers','documents','contacts','conges'].map(k=>db[k].filter(r=>(Object.values(r).join(' ')+' '+(r.agentId?who(r.agentId):'')).toLowerCase().includes(q)).slice(0,4).map(r=>[M[k].main(r)||'—',M[k].l,()=>edit(k,r.id)]))).slice(0,8):ACT.map(([t,f])=>[t,'Action',f]);
+$('#cpr').innerHTML=cpl.length?cpl.map((x,i)=>`<a class="${i?'':'f'}" onclick="cpg(${i})"><span>${esc(x[0])}</span><small>${x[1]}</small></a>`).join(''):'<a><small>Aucun résultat</small></a>'}
+const cpg=i=>{cpx();cpl[i]&&cpl[i][2]()},cpk=e=>{if(e.key=='Enter')cpg(0);if(e.key=='Escape')cpx()};
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key=='k'){e.preventDefault();cpo()}else if(e.key=='Escape'){shut();cpx()}});
+// Le contenu métier n'est affiché qu'après authentification et chargement central.
+$('#sd').style.visibility='hidden';$('#mn').style.visibility='hidden';
+async function baobabLoadWorkspace(){
+  const {data,error}=await window.baobabSupabase.from('baobab_workspace').select('data').eq('user_id',baobabUser.id).maybeSingle();
+  if(error) throw error;
+  db=Object.assign(baobabEmpty(),data?.data||{});db.cfg=Object.assign({svc:'',av:2,droit:30},db.cfg);db.archivesActes=Array.isArray(db.archivesActes)?db.archivesActes:[];
+  const legacy=(db.actes||[]).filter(a=>a.archived);
+  legacy.forEach(a=>{if(!db.archivesActes.some(x=>x.num===a.num))db.archivesActes.unshift({...a,archivedAt:a.archivedAt||Date.now()})});
+  if(legacy.length){db.actes=db.actes.filter(a=>!a.archived);persist();}
+}
+function baobabShowApp(){ $('#authGate').style.display='none';$('#cloudbar').style.display='flex';$('#sd').style.visibility='';$('#mn').style.visibility='';go('home'); }
+async function baobabEnter(user){
+  baobabUser=user;
+  $('#authError').textContent='';$('#authSubmit').disabled=true;$('#authSubmit').textContent='Chargement des données…';
+  try{await baobabLoadWorkspace();baobabShowApp();$('#cloudState').textContent='Données synchronisées';}
+  catch(e){baobabUser=null;$('#authError').textContent='Impossible de charger les données centrales. Vérifiez la configuration, les règles RLS et la connexion.\n'+(e.message||'');await window.baobabSupabase.auth.signOut();}
+  finally{$('#authSubmit').disabled=false;$('#authSubmit').textContent='Se connecter';}
+}
+$('#authCard').addEventListener('submit',async e=>{e.preventDefault();$('#authError').textContent='';if(!window.baobabSupabase){$('#authError').textContent='Configuration Supabase manquante. Complétez supabase-config.js.';return;}$('#authSubmit').disabled=true;$('#authSubmit').textContent='Connexion…';const {data,error}=await window.baobabSupabase.auth.signInWithPassword({email:$('#authEmail').value.trim(),password:$('#authPassword').value});if(error){$('#authError').textContent='Connexion refusée : '+error.message;$('#authSubmit').disabled=false;$('#authSubmit').textContent='Se connecter';return;}await baobabEnter(data.user);});
+async function baobabLogout(){if(!confirm('Se déconnecter de Baobab Suite RH ?'))return;await window.baobabSupabase.auth.signOut();baobabUser=null;db=baobabEmpty();$('#cloudbar').style.display='none';$('#sd').style.visibility='hidden';$('#mn').style.visibility='hidden';$('#authGate').style.display='flex';$('#authPassword').value='';$('#authEmail').focus();}
+(async()=>{try{if(!window.baobabSupabase){$('#authError').textContent='Configuration Supabase manquante. Complétez supabase-config.js avant le déploiement.';return;}const {data:{session},error}=await window.baobabSupabase.auth.getSession();if(error)throw error;if(session?.user)await baobabEnter(session.user);}catch(e){$('#authError').textContent='Initialisation impossible : '+(e.message||e);}})();
+</script></body></html>
